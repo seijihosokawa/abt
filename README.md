@@ -5,6 +5,18 @@ This is an automated bank teller I made for a software engineering class. It inc
 
 This uses Django framework with Python backend, SQLite database, Bootstrap library and HTML.
 
+Here are screenshots of the functionality:
+![Screenshot](images/home.png)
+![Screenshot](images/login.png)
+![Screenshot](images/accounts.png)
+![Screenshot](images/account_history.png)
+![Screenshot](images/deposit.png)
+![Screenshot](images/withdraw.png)
+![Screenshot](images/transfers.png)
+
+
+
+
 References:
-  * https://docs.djangoproject.com/en/3.1/
+  * https://docs.djangoproject.com/en/2.1/
   * https://getbootstrap.com/docs/4.5/getting-started/introduction/
