@@ -1,0 +1,22 @@
+{% extends "automatedbankteller/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+{% load humanize %}
+<h1>Transfers and Payments</h1>
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                {{ form|crispy }}
+                <legend class="border-bottom mb-4">Enter Transfer Information</legend>
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Transfer</button>
+            </div>
+        </form>
+    </div>
+<h5>Your Accounts:</h5>
+    {% for account in accounts %}
+    <p>{{ account.get_account_type_display }} Account: ******{{ account.accountID|stringformat:"i"|slice:"6:10" }}</p>
+    {% endfor %}
+{% endblock content %}

@@ -1,0 +1,24 @@
+{% extends "automatedbankteller/base.html" %}
+{% block content %}
+{% load humanize %}
+    <h1>Transaction History</h1>
+    {% for transaction in transactions %}
+        <table style="width:100%">
+            <tr>
+              <th>Total Amount</th>
+              <th>Account Num From</th>
+              <th>Account Num To</th>
+              <th>Transaction Date</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+                <td>${{ transaction.amount|intcomma }}</td>
+                <td>******{{ transaction.accountID_sent|stringformat:"i"|slice:"6:10" }}</td>
+                <td>******{{ transaction.accountID_received|stringformat:"i"|slice:"6:10" }}</td>
+                <td>{{ transaction.transaction_date }}</td>
+                <td>{{ transaction.description }}</td>
+            </tr>
+            <hr>
+        </table>
+    {% endfor %}
+{% endblock content %}

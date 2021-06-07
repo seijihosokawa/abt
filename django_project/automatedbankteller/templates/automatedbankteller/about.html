@@ -1,0 +1,25 @@
+{% extends "automatedbankteller/base.html" %}
+{% block content %}
+    <h1>About Page</h1>
+    <hr>
+    <h2>Fee Outline:</h2>
+    <table style="width:100%">
+      <tr>
+        <th>Incoming Transaction</th>
+        <th>Outgoing Transaction</th>
+        <th>Internal Transactions</th>
+      </tr>
+      <tr>
+        <td>$15</td>
+        <td>$15</td>
+        <td>No Cost</td>
+      </tr>
+    </table>
+    <hr>
+    <p>*No charges for withdraw or deposit.
+        <br>*No charges for transaction between personal account.
+    </p>
+    <p>Thank you for using the automated bank teller. If you have any questions please call the branch's phone number below. </p>
+    <p>Have a great day!</p>
+    <p>Phone Number: 919-230-0057</p>
+{% endblock content %}
